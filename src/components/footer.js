@@ -1,37 +1,45 @@
 import React from 'react'
 
 import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import styled from 'styled-components';
+
+const SocialIcon = styled.a`
+  margin: auto;
+  font-size: 300%;
+  color: white;
+  text-decoration: none;
+  :hover {
+    color: turquoise;
+  }
+`
+const Outside = styled.div`
+  background: #F3E5AB;
+`
+const Inside = styled.div`
+  margin: 0 auto;
+  max-width: 960;
+  padding: 1rem 1rem;
+  display: flex;
+`
 
 const Footer = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1rem 1rem',
-        color: 'white',
-        textDecoration: 'none',
-      }}
-    >
+  <Outside>
+    <Inside>
 
-    <a href="https://www.linkedin.com/in/maya-sweedler-601b52127/">
-      <FaLinkedin />
-    </a>
+      <SocialIcon href="https://www.linkedin.com/in/maya-sweedler-601b52127/">
+        <FaLinkedin />
+      </SocialIcon>
 
-    <a href="mailto:maya@sweedler.com?subject=Mail from Our Site">
-      <FaEnvelope />
-    </a>
+      <SocialIcon href="mailto:maya@sweedler.com?subject=Mail from Our Site">
+        <FaEnvelope />
+      </SocialIcon>
 
-    <a href="https://twitter.com/mayasweedler">
-      <FaTwitter />
-    </a>
+      <SocialIcon href="https://twitter.com/mayasweedler">
+        <FaTwitter />
+      </SocialIcon>
 
-    </div>
-  </div>
+    </Inside>
+  </Outside>
 )
 
 export default Footer;
