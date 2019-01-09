@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+
+import { FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = ({ siteTitle }) => (
   <div
@@ -12,21 +13,25 @@ const Footer = ({ siteTitle }) => (
         margin: '0 auto',
         maxWidth: 960,
         padding: '1rem 1rem',
+        color: 'white',
+        textDecoration: 'none',
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        Social media links TODO
-      </h1>
+
+    <a href="https://www.linkedin.com/in/maya-sweedler-601b52127/">
+      <FaLinkedin />
+    </a>
+
+    <a href="mailto:maya@sweedler.com?subject=Mail from Our Site">
+      <FaEnvelope />
+    </a>
+
+    <a href="https://twitter.com/mayasweedler">
+      <FaTwitter />
+    </a>
+
     </div>
   </div>
 )
 
-Footer.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Footer.defaultProps = {
-  siteTitle: '',
-}
-
-export default Footer
+export default Footer;
