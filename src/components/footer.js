@@ -8,6 +8,7 @@ const SocialIcon = styled.a`
   font-size: 300%;
   color: white;
   text-decoration: none;
+  transition: 0.3s;
   :hover {
     color: turquoise;
   }

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout'
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout page="About me">
     <h1>About me</h1>
 
@@ -16,4 +16,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
