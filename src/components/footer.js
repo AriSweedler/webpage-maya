@@ -27,11 +27,11 @@ const Footer = ({ siteTitle }) => (
   <Outside>
     <Inside>
 
-      <SocialIcon href="https://www.linkedin.com/in/maya-sweedler-601b52127/">
+      <SocialIcon href="https://il.linkedin.com/in/maya-sweedler-601b52127/">
         <FaLinkedin />
       </SocialIcon>
 
-      <SocialIcon href="mailto:maya@sweedler.com?subject=Mail from Our Site">
+      <SocialIcon href="mailto:maya.sweedler@gmail.com?subject=Mail from Our Site">
         <FaEnvelope />
       </SocialIcon>
 

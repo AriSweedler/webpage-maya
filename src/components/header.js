@@ -7,29 +7,25 @@ const Outside = styled.div`
   background: #F3E5AB;
   margin-bottom: 1.45rem;
 `
-
+/* base a component's style off of an html object */
 const Inside = styled.div`
   margin: 0 auto;
   max-width: 960;
   padding: 1.45rem 1.0875rem;
-
-  h1 {
-    margin: 0
-    * {
-      color: white;
-      text-decoration: none;
-    }
-  }
+`
+/* extend a component's style */
+const StyledLink = styled(Link)`
+  margin: 0
+  color: white;
+  text-decoration: none;
 `
 
 const Header = ({ siteTitle }) => (
   <Outside>
     <Inside>
-      <h1>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
+      <StyledLink as="h1" to="/">
+        {siteTitle}
+      </StyledLink>
     </Inside>
   </Outside>
 )
