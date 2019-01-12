@@ -4,8 +4,8 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 
 /*
-light yellow: #F3E5AB
-turquoise: turqoise
+light yellow: #F9F6B8
+turquoise: #00bdae
 white: white
 light grey: lightgrey
 */

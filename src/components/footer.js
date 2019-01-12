@@ -10,11 +10,11 @@ const SocialIcon = styled.a`
   text-decoration: none;
   transition: 0.3s;
   :hover {
-    color: turquoise;
+    color: #F9F6B8;
   }
 `
 const Outside = styled.div`
-  background: #F3E5AB;
+  background: #00bdae;
 `
 const Inside = styled.div`
   margin: 0 auto;
@@ -25,7 +25,7 @@ const Inside = styled.div`
 
 const Footer = ({ siteTitle }) => (
   <Outside>
-    <Inside>
+    <Inside as="nav">
 
       <SocialIcon href="https://il.linkedin.com/in/maya-sweedler-601b52127/">
         <FaLinkedin />
@@ -40,6 +40,7 @@ const Footer = ({ siteTitle }) => (
       </SocialIcon>
 
     </Inside>
+    {/* <p style={{ fontSize: "9px", paddingLeft: "10px" }}>I have a cool brother</p> */}
   </Outside>
 )
 

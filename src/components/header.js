@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React from 'react'
 
 const Outside = styled.div`
-  background: #F3E5AB;
+  background: #00bdae;
   margin-bottom: 1.45rem;
 `
 /* base a component's style off of an html object */
@@ -12,20 +12,67 @@ const Inside = styled.div`
   margin: 0 auto;
   max-width: 960;
   padding: 1.45rem 1.0875rem;
+  display: grid;
+  grid-auto-flow: column;
+
+  //TODO what looks good? This is gnarly lol.
+  grid-gap: 20px;
 `
-/* extend a component's style */
+/* extend a component's style, setting some new stuff */
 const StyledLink = styled(Link)`
-  margin: 0
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  line-height: 1.1;
+
+  transition: 0.3s;
+  :hover {
+    color: #F9F6B8;
+  }
+
+  //Is there a better way to make dividers between these things?
+  :before {
+    content: "| ";
+    color: white;
+  }
+
+  :first-child {
+    :before {
+      content: "";
+    }
+    font-size: 2.5rem;
+  }
 `
+
+const MyNav = styled.nav`
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-size: 2rem;
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    align-items: left;
+  }
+`
+
+const pages = [
+  {to: "/", title: "Maya Sweedler"},
+  {to: "/about", title: "about"},
+  {to: "/resume", title: "resume"},
+  {to: "/clips", title: "clips"},
+];
+const navItems = [];
+for(let item of pages) {
+  navItems.push(
+    <StyledLink to={item.to}>{item.title}</StyledLink>,
+  )
+}
 
 const Header = ({ siteTitle }) => (
   <Outside>
     <Inside>
-      <StyledLink as="h1" to="/">
-        {siteTitle}
-      </StyledLink>
+      <MyNav>{navItems}</MyNav>
     </Inside>
   </Outside>
 )
