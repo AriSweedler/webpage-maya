@@ -1,17 +1,13 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import ClipArray from '../components/Clips/clipArray'
 
-/*
-light yellow: #F9F6B8
-turquoise: #00bdae
-white: white
-light grey: lightgrey
-*/
+//TODO get all the clips, and sort them based on the nav bar
 const ClipsPage = () => (
   <Layout>
-    <h1>Clips</h1>
-    <p>Clips go here.</p>
+    <div>TODO sort/search bar</div>
+    <ClipArray />
   </Layout>
 )
 
