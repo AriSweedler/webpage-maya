@@ -12,13 +12,18 @@ const StyledClipArray = styled.div`
 
 //TODO figure out how to get all the clips
 //sort the array based on the nav bar (pass state of nav bar in through props)
-const clips = [];
-for (let i = 0; i < 10; i++) {
-  clips.push(<Clip id={i} />);
-}
 
-const ClipArray = () => (
-  <StyledClipArray>{clips}</StyledClipArray>
-)
+
+const ClipArray = (props) => {
+
+  const clips = [];
+  for (let i = 0; i < 10; i++) {
+    clips.push(<Clip {...props}/>);
+  }
+
+  return (
+    <StyledClipArray>{clips}</StyledClipArray>
+  );
+}
 
 export default ClipArray

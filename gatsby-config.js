@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Maya Sweedler',
+    key: 'hi',
   },
   plugins: [
     {

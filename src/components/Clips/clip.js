@@ -37,8 +37,9 @@ const Clip = (props) => (
       <div>Description of image. It's a nice image. Here's a longer description.</div>
       <div>I don't want the StyledClip to allocate any space, I want this to be on top of the TitleImage.</div>
     </Description>
-    <div>Here is clip {props.id}</div>
-    <img src="http://img01.deviantart.net/609f/i/2013/170/4/9/girl_with_the_leather_jacket_by_jleonardk-d69rdd7.png" alt="test image" />
+    <div>My key is {props.data.site.siteMetadata.key}</div>
+    <div>{JSON.stringify(props)}</div>
+    <img src="http://img01.deviantart.net/609f/i/2013/170/4/9/girl_with_the_leather_jacket_by_jleonardk-d69rdd7.png" alt="girl in jacket" />
   </StyledClip>
 )
 
