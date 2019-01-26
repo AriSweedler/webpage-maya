@@ -10,19 +10,22 @@ const StyledClipArray = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `
 
-//TODO figure out how to get all the clips
-//sort the array based on the nav bar (pass state of nav bar in through props)
-
-
 const ClipArray = (props) => {
 
-  const clips = [];
-  for (let i = 0; i < 10; i++) {
-    clips.push(<Clip {...props}/>);
+  const selectedClips = [];
+  const otherClips = [];
+  const clipDataArray = props.data.site.siteMetadata.clips;
+  for (let i = 0; i < clipDataArray.length; i++) {
+
+    if (clipDataArray[i].tags.includes(props.selectedTag)) {
+      selectedClips.push(<Clip data={clipDataArray[i]}/>);
+    } else {
+      otherClips.push(<Clip data={clipDataArray[i]}/>);
+    }
   }
 
   return (
-    <StyledClipArray>{clips}</StyledClipArray>
+    <StyledClipArray>{selectedClips}{otherClips}</StyledClipArray>
   );
 }
 
