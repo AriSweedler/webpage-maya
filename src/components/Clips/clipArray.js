@@ -4,10 +4,10 @@ import Clip from './clip'
 import styled from 'styled-components';
 
 const StyledClipArray = styled.div`
-  border: 2px solid orange;
-  padding: 3px;
+  width: 100%;
+  grid-gap: 20px;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `
 
 //TODO figure out how to get all the clips
