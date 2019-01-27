@@ -1,21 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const StyledClip = styled.div`
+const StyledClip = styled.a`
   border: 2px solid red;
   min-height: 300px;
+  color: black;
+  overflow: hidden;
+  position: relative;
 
+  transition: all 0.4s linear;
   &:hover {
     opacity: 0.9;
   }
 
-  overflow: hidden;
-  position: relative;
-
-  img {
-    object-fit: none;
-    margin-bottom: -10px;
-  }
+  // img {
+  //   object-fit: cover;
+  //   margin-bottom: -10px;
+  // }
 `
 
 const Description = styled.div`
@@ -24,6 +25,8 @@ const Description = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
+
+  overflow-y: auto;
 
   ${StyledClip}:not(hover) & {
     transition: all 0.7s ease-out;
@@ -37,7 +40,7 @@ const Description = styled.div`
 `
 
 const Clip = (props) => (
-  <StyledClip>
+  <StyledClip href={props.data.articleURL}>
     <Description>
       <h3>{props.data.title}</h3>
       <div>{props.data.description}.</div>
