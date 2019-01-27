@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledClip = styled.div`
   border: 2px solid red;
+  min-height: 300px;
 
   &:hover {
     opacity: 0.9;

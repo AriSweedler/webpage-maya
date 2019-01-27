@@ -17,10 +17,10 @@ const ClipArray = (props) => {
   const clipDataArray = props.data.site.siteMetadata.clips;
   for (let i = 0; i < clipDataArray.length; i++) {
 
-    if (clipDataArray[i].tags.includes(props.selectedTag)) {
-      selectedClips.push(<Clip data={clipDataArray[i]}/>);
+    if (clipDataArray[i].importance === 'very') {
+      selectedClips.push(<Clip key={i} data={clipDataArray[i]}/>);
     } else {
-      otherClips.push(<Clip data={clipDataArray[i]}/>);
+      otherClips.push(<Clip key={i} data={clipDataArray[i]}/>);
     }
   }
 

@@ -22,7 +22,10 @@ export const query = graphql`
           imageURL
           title
           description
-          tags
+          articleURL
+          genre
+          publication
+          importance
         }
       }
     }
