@@ -17,7 +17,8 @@ const ClipArray = (props) => {
   const clipDataArray = props.data.site.siteMetadata.clips;
   for (let i = 0; i < clipDataArray.length; i++) {
 
-    if (clipDataArray[i].importance === 'very') {
+    //TODO sort based on "props.tag"
+    if (clipDataArray[i].importance === 'least') {
       selectedClips.push(<Clip key={i} data={clipDataArray[i]}/>);
     } else {
       otherClips.push(<Clip key={i} data={clipDataArray[i]}/>);

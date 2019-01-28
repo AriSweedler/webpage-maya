@@ -65,7 +65,7 @@ const pages = [
 const navItems = [];
 for(let item of pages) {
   navItems.push(
-    <StyledLink to={item.to}>{item.title}</StyledLink>,
+    <StyledLink key={item.title} to={item.to}>{item.title}</StyledLink>,
   )
 }
 
