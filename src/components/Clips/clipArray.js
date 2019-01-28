@@ -18,7 +18,7 @@ const ClipArray = (props) => {
   for (let i = 0; i < clipDataArray.length; i++) {
 
     //TODO sort based on "props.tag"
-    if (clipDataArray[i].importance === 'least') {
+    if (clipDataArray[i].importance === 'most') {
       selectedClips.push(<Clip key={i} data={clipDataArray[i]}/>);
     } else {
       otherClips.push(<Clip key={i} data={clipDataArray[i]}/>);

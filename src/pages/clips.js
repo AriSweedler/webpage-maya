@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -6,17 +6,15 @@ import ClipArray from '../components/Clips/clipArray'
 import SearchBar from '../components/SearchBar/searchBar'
 
 const ClipsPage = ( {data} ) => {
-  const [tag, setTag] = useState({category: '', option: ''});
 
   return (
     <Layout>
       <SearchBar searchCallback={
         (category, option) => {
           console.log(`Logging selection '${category}: ${option}'`);
-          setTag(category, option);
         }
       } />
-      <ClipArray tag={tag} data={data}/>
+      <ClipArray tag={null} data={data}/>
     </Layout>
   );
 }

@@ -14,8 +14,6 @@ const Inside = styled.div`
   padding: 1.45rem 1.0875rem;
   display: grid;
   grid-auto-flow: column;
-
-  //TODO what looks good? This is gnarly lol.
   grid-gap: 20px;
 `
 /* extend a component's style, setting some new stuff */

@@ -19,6 +19,7 @@ const StyledClip = styled.a`
   // }
 `
 
+//TODO make this readable when on mobile & no mouse
 const Description = styled.div`
   background-color: lightgrey;
   padding: 10px;
