@@ -13,10 +13,10 @@ const StyledClip = styled.a`
     opacity: 0.9;
   }
 
-  // img {
-  //   object-fit: cover;
-  //   margin-bottom: -10px;
-  // }
+  img {
+    object-fit: cover;
+    margin-bottom: -10px;
+  }
 `
 
 //TODO make this readable when on mobile & no mouse
@@ -46,7 +46,7 @@ const Clip = (props) => (
       <h3>{props.data.title}</h3>
       <div>{props.data.description}.</div>
     </Description>
-    <img src={props.data.imageURL} alt={props.data.title} />
+    <img height="300" src={props.data.imageURL} alt={props.data.title} />
   </StyledClip>
 )
 

@@ -14,6 +14,7 @@ const ClipsPage = ( {data} ) => {
           console.log(`Logging selection '${category}: ${option}'`);
         }
       } />
+      {/* TODO how to pass state from SearchBar to ClipArray :( */}
       <ClipArray tag={null} data={data}/>
     </Layout>
   );
