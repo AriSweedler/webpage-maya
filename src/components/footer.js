@@ -27,15 +27,15 @@ const Footer = ({ siteTitle }) => (
   <Outside>
     <Inside as="nav">
 
-      <SocialIcon href="https://il.linkedin.com/in/maya-sweedler-601b52127/">
+      <SocialIcon href="https://il.linkedin.com/in/maya-sweedler-601b52127/" target="_blank">
         <FaLinkedin />
       </SocialIcon>
 
-      <SocialIcon href="mailto:maya.sweedler@gmail.com?subject=Mail from Our Site">
+      <SocialIcon href="mailto:maya.sweedler@gmail.com?subject=Mail from Our Site" target="_blank">
         <FaEnvelope />
       </SocialIcon>
 
-      <SocialIcon href="https://twitter.com/mayasweedler">
+      <SocialIcon href="https://twitter.com/mayasweedler" target="_blank">
         <FaTwitter />
       </SocialIcon>
 

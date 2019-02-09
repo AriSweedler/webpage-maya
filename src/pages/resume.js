@@ -1,16 +1,42 @@
 import React from 'react'
+import styled from 'styled-components';
 
 import Layout from '../components/layout'
+import { FaDownload } from 'react-icons/fa';
 
-/*
-light yellow: #F9F6B8
-turquoise: #00bdae
-white: white
-light grey: lightgrey
-*/
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`
+
+const DownloadButton = styled.a`
+  padding: 5px 1em 5px 1em;
+  cursor: pointer;
+  border-radius: 4em;
+
+
+  transition: all 0.4s linear;
+  & {
+    color: grey;
+    text-decoration: none;
+  }
+
+  :hover {
+    background-color: #00bdae;
+    color: black;
+  }
+`
+
 const ResumePage = () => (
   <Layout>
-    <h1>Resume</h1>
+    <Container>
+      <h1>Resume</h1>
+      <DownloadButton href="https://drive.google.com/uc?id=1fUoSBjL2FoIGlDUGAC54XX2039jvzIDs&export=download">
+        download <FaDownload />
+      </DownloadButton>
+    </Container>
     <iframe
       title="My Resume"
       src="https://drive.google.com/file/d/1fUoSBjL2FoIGlDUGAC54XX2039jvzIDs/preview"
