@@ -1,52 +1,64 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const StyledClip = styled.a`
-  border: 2px solid red;
-  min-height: 300px;
-  color: black;
-  overflow: hidden;
+const Description = styled.div`
+  position: absolute;
+  background-color: lightgrey;
+  z-index: 10; /* In front of the StyledImage */
+  padding: 10px 10px 0 10px;
+  top: 0;
+  bottom: 5px; //Why do I need this? To align bottom of description with bottom of image.
+
+  overflow-y: auto;
+
+`
+
+const StyledImage = styled.img`
+  z-index: 5; /* behind the Description */
+  margin: 0;
+  object-fit: cover;
+`
+
+const Title = styled.div`
+  font-weight: 100;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: center;
+
+`
+
+const ImageAndDescription = styled.div`
   position: relative;
 
   transition: all 0.4s linear;
   &:hover {
     opacity: 0.9;
   }
-
-  img {
-    object-fit: cover;
-    margin-bottom: -10px;
-  }
 `
 
-//TODO make this readable when on mobile & no mouse
-const Description = styled.div`
-  background-color: lightgrey;
-  padding: 10px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+const StyledClip = styled.a`
+  color: black;
+  overflow: hidden;
+  text-decoration: none;
 
-  overflow-y: auto;
-
-  ${StyledClip}:not(hover) & {
-    transition: all 0.7s ease-out;
-    transform: translateY(-1000%);
+  :not(hover) ${Description} {
+    transform: translateY(-500%);
+    transition: all 0.5s ease-in;
   }
 
-  ${StyledClip}:hover & {
-    transition: all 0.5s cubic-bezier(.22,1.21,.76,1);
+  :hover ${Description} {
     transform: translateY(0);
+    transition: all 0.5s cubic-bezier(.22,1.21,.77,1.05);
   }
 `
 
 const Clip = (props) => (
-  <StyledClip href={props.data.articleURL}>
-    <Description>
-      <h3>{props.data.title}</h3>
-      <div>{props.data.description}.</div>
-    </Description>
-    <img height="300" src={props.data.imageURL} alt={props.data.title} />
+  <StyledClip href={props.data.articleURL} target="_blank">
+    <ImageAndDescription>
+      <StyledImage src={props.data.imageURL} alt={props.data.title} />
+      <Description >{props.data.description}</Description>
+    </ImageAndDescription>
+    <Title>{props.data.title}</Title>
   </StyledClip>
 )
 

@@ -20,7 +20,7 @@ const Inside = styled.div`
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 100;
   line-height: 1.1;
 
   transition: 0.3s;
@@ -39,6 +39,7 @@ const StyledLink = styled(Link)`
       content: "";
     }
     font-size: 2.5rem;
+    font-weight: 700;
   }
 `
 
