@@ -10,12 +10,16 @@ const StyledSearchBar = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+
+  position: sticky;
+  z-index: 1;
+  top: 0;
 `
 
 const SearchBar = (props) => (
   <StyledSearchBar>
-    <SearchItem searchCallback={props.searchCallback} title="Publication" options={['Seattle Times', 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
-    <SearchItem searchCallback={props.searchCallback} title="Genre" options={['Investigative', 'Political', 'Sports', 'Features', 'Miscellaneous']}  />
+    <SearchItem searchCallback={props.searchCallback} title="publication" options={['Seattle Times', 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
+    <SearchItem searchCallback={props.searchCallback} title="genre" options={['Investigative', 'Political', 'Sports', 'Features']}  />
   </StyledSearchBar>
 )
 

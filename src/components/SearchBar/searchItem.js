@@ -4,7 +4,7 @@ import {MenuButton, MenuList, MenuItem} from 'react-menu-list';
 import styled from 'styled-components';
 
 const StyledMenuItem = styled(MenuItem)`
-  background: grey;
+  background: lightgrey;
   color: black;
   font-size: 1.2em;
   padding: 5px 10px;
@@ -16,15 +16,22 @@ const StyledMenuItem = styled(MenuItem)`
 
 const StyledSearchItem = styled(MenuButton)`
   cursor: pointer;
-  user-select: none; //prevent users from highlighting the text
-  border: none;
-
+  background-color: transparent;
+  border: 6px solid white;
+  border-radius: 4em;
+  color: white;
   font-size: 2em;
+  font-weight: 100;
   padding: 10px 20px;
 
-  transition: 0.1s;
+  transition: 0.4s;
   &:hover {
-    background: #F9F6B8;
+    border: 6px solid #f2efb3;
+    color: #F9F6B8;
+  }
+
+  ::before {
+    content: "Sort by: "
   }
 
   //TODO maybe upon an item being hovered have the StyledSearchItem also be colored
@@ -36,7 +43,7 @@ const SearchItem = (props) => {
     options.push(
       <StyledMenuItem
         key={opt}
-        highlightedStyle={{background: '#F9F6B8'}}
+        highlightedStyle={{background: '#f2efb3'}}
         onItemChosen={() => props.searchCallback(props.title, opt)}
         {...props}
       >{opt}</StyledMenuItem>
