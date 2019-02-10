@@ -5,12 +5,13 @@ const Description = styled.div`
   position: absolute;
   background-color: lightgrey;
   z-index: 10; /* In front of the StyledImage */
-  padding: 10px 10px 0 10px;
+  padding: 12px 20px 10px 20px;
   top: 0;
   bottom: 5px; //Why do I need this? To align bottom of description with bottom of image.
 
   overflow-y: auto;
-
+  text-align: justify;
+  font-size: 0.9em;
 `
 
 const StyledImage = styled.img`
@@ -20,11 +21,10 @@ const StyledImage = styled.img`
 `
 
 const Title = styled.div`
-  font-weight: 100;
-  font-size: 1.1em;
+  font-weight: bold;
+  font-size: 1.2em;
   line-height: 1.5em;
   text-align: center;
-
 `
 
 const ImageAndDescription = styled.div`
@@ -34,12 +34,6 @@ const ImageAndDescription = styled.div`
   &:hover {
     opacity: 0.9;
   }
-`
-
-const StyledClip = styled.a`
-  color: black;
-  overflow: hidden;
-  text-decoration: none;
 
   :not(hover) ${Description} {
     transform: translateY(-500%);
@@ -52,11 +46,20 @@ const StyledClip = styled.a`
   }
 `
 
+const StyledClip = styled.a`
+  color: black;
+  overflow: hidden;
+  text-decoration: none;
+`
+
 const Clip = (props) => (
   <StyledClip href={props.data.articleURL} target="_blank">
     <ImageAndDescription>
       <StyledImage src={props.data.imageURL} alt={props.data.title} />
-      <Description >{props.data.description}</Description>
+      <Description>
+        <p>{props.data.description}</p>
+        <p style={{"textAlign": "center"}}>~~~</p>
+      </Description>
     </ImageAndDescription>
     <Title>{props.data.title}</Title>
   </StyledClip>

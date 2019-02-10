@@ -24,7 +24,7 @@ const DownloadButton = styled.a`
   }
 
   :hover {
-    background-color: #00bdae;
+    background-color: #00998c;
     color: black;
   }
 `

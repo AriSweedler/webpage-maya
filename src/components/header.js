@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import React from 'react'
 
 const Outside = styled.div`
-  background: #00bdae;
+  background: #00998c;
   margin-bottom: 1.45rem;
 `
 /* base a component's style off of an html object */

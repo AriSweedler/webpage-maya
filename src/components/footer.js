@@ -14,7 +14,7 @@ const SocialIcon = styled.a`
   }
 `
 const Outside = styled.div`
-  background: #00bdae;
+  background: #00998c;
 `
 const Inside = styled.div`
   margin: 0 auto;

@@ -5,13 +5,17 @@ import styled from 'styled-components';
 
 const StyledMenuItem = styled(MenuItem)`
   background: lightgrey;
-  color: black;
   font-size: 1.2em;
   padding: 5px 10px;
   transition: 0.05s;
 
   cursor: pointer;
   user-select: none; //prevent users from highlighting the text
+
+  //add 5 extra pixels of padding to the first menu item so the text isn't covered by the search bar as much
+  :first-child {
+    padding-top: 15px;
+  }
 `
 
 const StyledSearchItem = styled(MenuButton)`
@@ -20,7 +24,7 @@ const StyledSearchItem = styled(MenuButton)`
   border: 6px solid white;
   border-radius: 4em;
   color: white;
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: 100;
   padding: 10px 20px;
 
@@ -29,12 +33,6 @@ const StyledSearchItem = styled(MenuButton)`
     border: 6px solid #f2efb3;
     color: #F9F6B8;
   }
-
-  ::before {
-    content: "Sort by: "
-  }
-
-  //TODO maybe upon an item being hovered have the StyledSearchItem also be colored
 `
 
 const SearchItem = (props) => {
