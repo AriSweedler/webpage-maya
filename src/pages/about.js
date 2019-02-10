@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import headshot from '../images/headshot1.jpg';
+import headshot from '../images/headshot1.jpg'
 import Layout from '../components/layout'
 
 const StyledImage = styled.img`

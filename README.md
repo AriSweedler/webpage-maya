@@ -3,4 +3,4 @@ I made this for my sister
 
 ## 💫 Deploy
 
-[Desployed at Netlify](https://maya.sweedler.com)
+[Deployed at Netlify](https://maya.sweedler.com)

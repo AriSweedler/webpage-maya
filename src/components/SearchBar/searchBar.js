@@ -26,7 +26,7 @@ const Prefix = styled.div`
 const SearchBar = (props) => (
   <StyledSearchBar>
     <Prefix>sort by:</Prefix>
-    <SearchItem searchCallback={props.searchCallback} title="publication" options={['Seattle Times', 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
+    <SearchItem searchCallback={props.searchCallback} title="publication" options={["Seattle Times", 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
     <SearchItem searchCallback={props.searchCallback} title="genre" options={['Investigative', 'Political', 'Sports', 'Features']}  />
   </StyledSearchBar>
 )

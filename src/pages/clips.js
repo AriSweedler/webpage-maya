@@ -6,15 +6,13 @@ import ClipArray from '../components/Clips/clipArray'
 import SearchBar from '../components/SearchBar/searchBar'
 
 const ClipsPage = ( {data} ) => {
-  // Declare a new state variable, which we'll call "tag"
-  const [myTag, setTag] = useState({"category": "none", "option": "none"});
+  // React Hooks rock!
+  const [myTag, setTag] = useState({"category": null, "option": null});
 
   return (
     <Layout>
       <SearchBar searchCallback={
-        (category, option) => {
-          setTag({"category": category, "option": option});
-        }
+        (category, option) => setTag({"category": category, "option": option})
       } />
       <ClipArray tag={myTag} data={data}/>
     </Layout>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const Description = styled.div`
   position: absolute;
@@ -50,6 +50,7 @@ const StyledClip = styled.a`
   color: black;
   overflow: hidden;
   text-decoration: none;
+  max-width: 600px;
 `
 
 const Clip = (props) => (

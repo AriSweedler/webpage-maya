@@ -1,7 +1,8 @@
 import React from 'react'
 
 import Clip from './clip'
-import styled from 'styled-components';
+import ClipDivide from './divide'
+import styled from 'styled-components'
 
 const StyledClipArray = styled.div`
   width: 100%;
@@ -17,8 +18,6 @@ const ClipArray = (props) => {
   const clipDataArray = props.data.site.siteMetadata.clips;
   let i = 0;
   for (let clipData of clipDataArray) {
-
-    //TODO sort based on "props.tag"
     if (clipData[props.tag.category] === props.tag.option) {
       selectedClips.push(<Clip key={i} data={clipData}/>);
     } else {
@@ -28,7 +27,11 @@ const ClipArray = (props) => {
   }
 
   return (
-    <StyledClipArray>{selectedClips}{otherClips}</StyledClipArray>
+    <>
+      <StyledClipArray>{selectedClips}</StyledClipArray>
+      <ClipDivide tag={props.tag} />
+      <StyledClipArray>{otherClips}</StyledClipArray>
+    </>
   );
 }
 
