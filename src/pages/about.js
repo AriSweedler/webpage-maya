@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import Image from '../components/image';
+import headshot from '../images/headshot1.jpg';
 import Layout from '../components/layout'
 
-const StyledImage = styled.div`
+const StyledImage = styled.img`
   float: left;
   width: calc(50% - 40px);
   margin: 10px;
@@ -31,7 +31,7 @@ const AboutPage = () => (
   <Layout page="About me" >
     <Container>
       <h1>About me</h1>
-      <StyledImage><Image /></StyledImage>
+      <StyledImage src={headshot} />
       <p>Hello, my name is Maya Sweedler.</p>
 
       <p>I’m a reporter currently searching for opportunities in journalism — preferably something that involves diving into public records and flexing my multimedia skills. I’m fascinated by the vagaries of the criminal justice system and the complexity of the modern political economy. </p>

@@ -15,14 +15,16 @@ const ClipArray = (props) => {
   const selectedClips = [];
   const otherClips = [];
   const clipDataArray = props.data.site.siteMetadata.clips;
-  for (let i = 0; i < clipDataArray.length; i++) {
+  let i = 0;
+  for (let clipData of clipDataArray) {
 
     //TODO sort based on "props.tag"
-    if (clipDataArray[i].importance === 'most') {
-      selectedClips.push(<Clip key={i} data={clipDataArray[i]}/>);
+    if (clipData[props.tag.category] === props.tag.option) {
+      selectedClips.push(<Clip key={i} data={clipData}/>);
     } else {
-      otherClips.push(<Clip key={i} data={clipDataArray[i]}/>);
+      otherClips.push(<Clip key={i} data={clipData}/>);
     }
+    i++;
   }
 
   return (
