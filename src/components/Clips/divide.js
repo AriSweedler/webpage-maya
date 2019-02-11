@@ -8,12 +8,6 @@ const StyledHorizontalRule = styled.hr`
   margin: 20px 0;
 `
 
-const DivideText = styled.div`
-  text-align: center;
-  padding: 1em;
-  font-size: 1.3em;
-`
-
 const ClipDivide = (props) => {
 
   if (!props.tag.category) {
@@ -23,7 +17,6 @@ const ClipDivide = (props) => {
   return (
     <>
       <StyledHorizontalRule/>
-      <DivideText>End of <i>{props.tag.category}</i>, <b>{props.tag.option}</b> clips</DivideText>
       <StyledHorizontalRule/>
     </>
   );

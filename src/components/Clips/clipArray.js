@@ -11,19 +11,34 @@ const StyledClipArray = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `
 
-const ClipArray = (props) => {
+/*
+least	somewhat	moderately	strongly	most
+5     4         3           2         1
+*/
+function importanceNumber(clip) {
+  if (clip.importance === "least") return 5;
+  else if (clip.importance === "somewhat") return 4;
+  else if (clip.importance === "moderately") return 3;
+  else if (clip.importance === "strongly") return 2;
+  else if (clip.importance === "most") return 1;
+  else return 0;
+}
 
+const ClipArray = (props) => {
   const selectedClips = [];
   const otherClips = [];
-  const clipDataArray = props.data.site.siteMetadata.clips;
   let i = 0;
+
+  /* sort the way we traverse through clips by importance */
+  const clipDataArray = props.data.site.siteMetadata.clips.sort((c1, c2) => importanceNumber(c1) - importanceNumber(c2));;
+
+  /* sort by tag */
   for (let clipData of clipDataArray) {
     if (clipData[props.tag.category] === props.tag.option) {
-      selectedClips.push(<Clip key={i} data={clipData}/>);
+      selectedClips.push(<Clip key={i++} data={clipData}/>);
     } else {
-      otherClips.push(<Clip key={i} data={clipData}/>);
+      otherClips.push(<Clip key={i++} data={clipData}/>);
     }
-    i++;
   }
 
   return (
