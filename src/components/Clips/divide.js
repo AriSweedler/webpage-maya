@@ -9,11 +9,6 @@ const StyledHorizontalRule = styled.hr`
 `
 
 const ClipDivide = (props) => {
-
-  if (!props.tag.category) {
-    return null;
-  }
-
   return (
     <>
       <StyledHorizontalRule/>

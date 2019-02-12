@@ -27,6 +27,7 @@ function importanceNumber(clip) {
 const ClipArray = (props) => {
   const selectedClips = [];
   const otherClips = [];
+  const publications = ['Seattle Times',	'LA Times',	'YDN',	'Pittsburgh Post Gazette',	'Wall Street Journal'];
   let i = 0;
 
   /* sort the way we traverse through clips by importance */
@@ -41,10 +42,19 @@ const ClipArray = (props) => {
     }
   }
 
+  const blurb = (
+    <div>
+      <h1>My work:</h1>
+      <p>Appearing in the {publications.join(', ')}</p>
+      <p>Mouse over clips for an article synopsis. Click to open the article in a new tab. Use the search bar to sort articles by publication or genre.</p>
+    </div>
+  )
+
   return (
     <>
+      { props.tag.category ? null : blurb }
       <StyledClipArray>{selectedClips}</StyledClipArray>
-      <ClipDivide tag={props.tag} />
+      <ClipDivide />
       <StyledClipArray>{otherClips}</StyledClipArray>
     </>
   );
