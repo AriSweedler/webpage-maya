@@ -51,6 +51,9 @@ const StyledClip = styled.a`
   overflow: hidden;
   text-decoration: none;
   max-width: 600px;
+
+  /* I can't style the MenuList component from react-menu-list! So I'm putting this here... */
+  z-index: -1;
 `
 
 const Clip = (props) => (

@@ -12,10 +12,7 @@ const StyledMenuItem = styled(MenuItem)`
   cursor: pointer;
   user-select: none; //prevent users from highlighting the text
 
-  //add 5 extra pixels of padding to the first menu item so the text isn't covered by the search bar as much
-  :first-child {
-    padding-top: 15px;
-  }
+  //how to get this to appear over the sort bar
 `
 
 const StyledSearchItem = styled(MenuButton)`
@@ -43,11 +40,13 @@ const SearchItem = (props) => {
         key={opt}
         highlightedStyle={{background: '#f2efb3'}}
         onItemChosen={() => props.searchCallback(props.title, opt)}
+        style={{"z-index": "10"}}
+        style={{"zIndex": "10"}}
         {...props}
       >{opt}</StyledMenuItem>
     );
   }
-  const myMenu = <MenuList>{options}</MenuList>
+  const myMenu = <MenuList >{options}</MenuList>
   return <StyledSearchItem menu={myMenu}>{props.title}</StyledSearchItem>
 }
 

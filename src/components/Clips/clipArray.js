@@ -45,8 +45,8 @@ const ClipArray = (props) => {
   const blurb = (
     <div>
       <h1>My work:</h1>
-      <p>Appearing in the {publications.join(', ')}</p>
-      <p>Mouse over clips for an article synopsis. Click to open the article in a new tab. Use the search bar to sort articles by publication or genre.</p>
+      <p>Appearing in the {publications.slice(0, -1).join(', ')} and {publications.slice(-1)}</p>
+      <p>Mouse over clips for an article synopsis. Click to open the article in a new tab. Use the search bar to filter</p>
     </div>
   )
 

@@ -11,7 +11,7 @@ const ClipsPage = ( {data} ) => {
 
   return (
     <Layout>
-      <SearchBar searchCallback={
+      <SearchBar tag={myTag} searchCallback={
         (category, option) => setTag({"category": category, "option": option})
       } />
       <ClipArray tag={myTag} data={data}/>
