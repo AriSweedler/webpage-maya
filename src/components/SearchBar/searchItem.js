@@ -18,9 +18,9 @@ const StyledMenuItem = styled(MenuItem)`
 const StyledSearchItem = styled(MenuButton)`
   cursor: pointer;
   background-color: transparent;
-  border: 6px solid white;
+  border: 6px solid #f9f9f2;
   border-radius: 4em;
-  color: white;
+  color: #f9f9f2;
   font-size: 1.3em;
   font-weight: 100;
   padding: 10px 20px;

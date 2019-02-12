@@ -18,7 +18,7 @@ const Inside = styled.div`
 `
 /* extend a component's style, setting some new stuff */
 const StyledLink = styled(Link)`
-  color: white;
+  color: #f9f9f2;
   text-decoration: none;
   font-weight: 100;
   line-height: 1.1;
@@ -31,7 +31,6 @@ const StyledLink = styled(Link)`
   //Is there a better way to make dividers between these things?
   :before {
     content: "| ";
-    color: white;
   }
 
   :first-child {

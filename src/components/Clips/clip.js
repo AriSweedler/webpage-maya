@@ -47,13 +47,10 @@ const ImageAndDescription = styled.div`
 `
 
 const StyledClip = styled.a`
-  color: black;
+  color: #141414;
   overflow: hidden;
   text-decoration: none;
   max-width: 600px;
-
-  /* I can't style the MenuList component from react-menu-list! So I'm putting this here... */
-  z-index: -1;
 `
 
 const Clip = (props) => (
@@ -62,7 +59,8 @@ const Clip = (props) => (
       <StyledImage src={props.data.imageURL} alt={props.data.title} />
       <Description>
         <p>{props.data.description}</p>
-        <p style={{"textAlign": "center"}}>~~~</p>
+        <hr></hr>
+        <hr></hr>
       </Description>
     </ImageAndDescription>
     <Title>{props.data.title}</Title>

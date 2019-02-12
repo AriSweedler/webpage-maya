@@ -6,12 +6,12 @@ import SearchItem from './searchItem'
 const SearchBarWrapper = styled.div`
   // Make the SearchBar stick to the top of the screen if you scroll down
   position: sticky;
-  z-index: 0;
+  z-index: 1;
   top: 0;
 
   background-color: #00998c;
   text-align: center;
-  color: white;
+  color: #f9f9f2;
   padding-bottom: 10px;
   margin-bottom: 20px; /* match grid-gap for ClipsArray */
 

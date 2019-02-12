@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const SocialIcon = styled.a`
   margin: auto;
   font-size: 300%;
-  color: white;
+  color: #f9f9f2;
   text-decoration: none;
   transition: 0.3s;
   :hover {

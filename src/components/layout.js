@@ -5,6 +5,10 @@ import Header from './header'
 import Footer from './footer'
 import './layout.css'
 
+const Wrapper = styled.div`
+  background-color: #f9f9f2;
+`
+
 const Children = styled.div`
   margin: 0 auto;
   max-width: 960;
@@ -12,11 +16,11 @@ const Children = styled.div`
   padding-top: 0;
 `
 const Layout = ({ children }) => (
-  <div>
+  <Wrapper>
     <Header siteTitle="Maya Sweedler" />
     <Children>{children}</Children>
     <Footer />
-  </div>
+  </Wrapper>
 )
 
 export default Layout
