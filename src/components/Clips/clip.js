@@ -5,7 +5,7 @@ const Description = styled.div`
   position: absolute;
   background-color: lightgrey;
   z-index: 10; /* In front of the StyledImage */
-  padding: 12px 20px 10px 20px;
+  padding: 12px 20px 30px 20px;
   top: 0;
   bottom: 5px; //Why do I need this? To align bottom of description with bottom of image.
 
@@ -53,14 +53,19 @@ const StyledClip = styled.a`
   max-width: 600px;
 `
 
+const StyledHR = styled.hr`
+  height: 3px;
+  margin: 3px;
+`
+
 const Clip = (props) => (
   <StyledClip href={props.data.articleURL} target="_blank">
     <ImageAndDescription>
       <StyledImage src={props.data.imageURL} alt={props.data.title} />
       <Description>
         <p>{props.data.description}</p>
-        <hr></hr>
-        <hr></hr>
+        <StyledHR></StyledHR>
+        <StyledHR></StyledHR>
       </Description>
     </ImageAndDescription>
     <Title>{props.data.title}</Title>

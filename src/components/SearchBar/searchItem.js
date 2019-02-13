@@ -15,7 +15,7 @@ const StyledMenuItem = styled(MenuItem)`
   //how to get this to appear over the sort bar
 `
 
-const StyledSearchItem = styled(MenuButton)`
+const StyledMenuButton = styled(MenuButton)`
   cursor: pointer;
   background-color: transparent;
   border: 6px solid #f9f9f2;
@@ -33,6 +33,8 @@ const StyledSearchItem = styled(MenuButton)`
 `
 
 const SearchItem = (props) => {
+
+  /* Make the MenuList outta MenuItems */
   const options = [];
   for (let opt of props.options) {
     options.push(
@@ -40,14 +42,14 @@ const SearchItem = (props) => {
         key={opt}
         highlightedStyle={{background: '#f2efb3'}}
         onItemChosen={() => props.searchCallback(props.title, opt)}
-        style={{"z-index": "10"}}
-        style={{"zIndex": "10"}}
         {...props}
       >{opt}</StyledMenuItem>
     );
   }
-  const myMenu = <MenuList >{options}</MenuList>
-  return <StyledSearchItem menu={myMenu}>{props.title}</StyledSearchItem>
+  const myMenuList = <MenuList>{options}</MenuList>
+
+  /* pass the MenuList as a prop to the MenuButton */
+  return <StyledMenuButton menu={myMenuList}>{props.title}</StyledMenuButton>
 }
 
 
