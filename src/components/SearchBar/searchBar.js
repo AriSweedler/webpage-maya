@@ -41,8 +41,8 @@ const SearchBar = (props) => (
   <SearchBarWrapper>
     <StyledSearchBar>
       <Prefix>sort by:</Prefix>
-      <SearchItem searchCallback={props.searchCallback} title="publication" options={['Seattle Times', 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
-      <SearchItem searchCallback={props.searchCallback} title="genre" options={['Investigative', 'Political', 'Sports', 'Features']} />
+      <SearchItem searchCallback={props.searchCallback} tag={props.tag} title="publication" options={['Seattle Times', 'LA Times', 'YDN', 'Pittsburgh Post Gazette', 'Wall Street Journal']} />
+      <SearchItem searchCallback={props.searchCallback} tag={props.tag} title="genre" options={['Investigative', 'Political', 'Sports', 'Features']} />
     </StyledSearchBar>
     { props.tag.category ? tagDescription(props.tag) : null }
   </SearchBarWrapper>

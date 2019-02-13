@@ -12,11 +12,16 @@ const StyledMenuItem = styled(MenuItem)`
   cursor: pointer;
   user-select: none; //prevent users from highlighting the text
 
-  //how to get this to appear over the sort bar
+  //how to get this to appear over the sort bar (Oof. Hacky solution)
+  :first-child {
+    margin-top: ${props => props.tag.category !== null ? '45px' : '9px' }
+  }
 `
 
 const StyledMenuButton = styled(MenuButton)`
   cursor: pointer;
+  user-select: none; //prevent users from highlighting the text
+
   background-color: transparent;
   border: 6px solid #f9f9f2;
   border-radius: 4em;

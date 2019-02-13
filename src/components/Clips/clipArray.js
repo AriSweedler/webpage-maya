@@ -27,7 +27,6 @@ function importanceNumber(clip) {
 const ClipArray = (props) => {
   const selectedClips = [];
   const otherClips = [];
-  const publications = ['Seattle Times',	'LA Times',	'YDN',	'Pittsburgh Post Gazette',	'Wall Street Journal'];
   let i = 0;
 
   /* sort the way we traverse through clips by importance */
