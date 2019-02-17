@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import headshot from '../images/headshot1.jpg'
+import mayaImage from '../assets/maya.jpg'
 import Layout from '../components/layout'
 
 const StyledImage = styled.img`
@@ -31,7 +31,7 @@ const AboutPage = () => (
   <Layout page="About me" >
     <Container>
       <h1>About me</h1>
-      <StyledImage src={headshot} />
+      <StyledImage src={mayaImage} />
       <p>Hello, my name is Maya Sweedler.</p>
 
       <p>I am a reporter currently searching for opportunities in journalism — preferably something that involves diving into public records and flexing my multimedia skills. I’m fascinated by the vagaries of the criminal justice system and the intersection of politics and policy. I also love stories that involve the relationships among sports, civil rights and culture.</p>

@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
+  "name": "maya-sweedler-portfolio",
+  "description": "Maya Sweedler's portfolio website",
+  "version": "1.5.0",
   "author": "Ari Sweedler <ari@sweedler.com>",
   "dependencies": {
     "gatsby": "^2.0.53",
@@ -9,8 +9,7 @@
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
     "gatsby-plugin-sharp": "^2.0.17",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-json": "^2.1.7",
+    "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-sharp": "^2.1.8",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
@@ -20,20 +19,21 @@
   },
   "keywords": [
     "gatsby",
+    "maya",
+    "ari",
+    "sweedler",
     "portfolio"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop"
   },
   "devDependencies": {
     "react-error-overlay": "^5.1.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AriSweedler/webpage-maya/"
+    "url": "git@github.com:AriSweedler/webpage-maya.git"
   }
 }
